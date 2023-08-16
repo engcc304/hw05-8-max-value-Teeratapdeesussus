@@ -22,14 +22,25 @@
 */
 #include <stdio.h>
 
-int main()
-{
-    int n1,n2,n3;
-    printf("Input Number [n1 n2 n3] :");
-    scanf("%d %d %d",&n1,&n2,&n3);
-    printf("1st Number = %d\n",n1);  printf("2st Number = %d\n",n2);  printf("3st Number = %d\n",n3);
-    if(n1 > n2 && n1 > n3) printf("The 1rd Number is the greatest among three");
-    if(n2 > n1 && n2 > n3) printf("The 2rd Number is the greatest among three");
-    if(n3 > n2 && n3 > n1) printf("The 3rd Number is the greatest among three");
+int main() {
+    int num1, num2, num3;
+    
+    // รับค่า Input
+    scanf("%d %d %d", &num1, &num2, &num3);
+    
+    // แสดงผลลัพธ์อันดับของแต่ละหมายเลข
+    printf("1st Number = %d\n", num1);
+    printf("2nd Number = %d\n", num2);
+    printf("3rd Number = %d\n", num3);
+    
+    // หาจำนวนที่มากที่สุด
+    if (num1 >= num2 && num1 >= num3) {
+        printf("The 1rd Number is the greatest among three\n");
+    } else if (num2 >= num1 && num2 >= num3) {
+        printf("The 2rd Number is the greatest among three\n");
+    } else {
+        printf("The 3rd Number is the greatest among three\n");
+    }
+
     return 0;
 }
